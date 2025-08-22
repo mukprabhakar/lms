@@ -101,7 +101,8 @@ const Sidebar = () => {
         { title: 'Religion', path: '/master/religion' },
         { title: 'Occupation', path: '/master/occupation' },
         { title: 'Caste', path: '/master/caste' },
-        'Purpose', 'Stream'
+        { title: 'Purpose', path: '/master/purpose' },
+        { title: 'Stream', path: '/master/stream' }
       ]
     },
     { 

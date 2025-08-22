@@ -19,6 +19,8 @@ import PaymentMethod from './pages/PaymentMethod';
 import Religion from './pages/Religion';
 import Occupation from './pages/Occupation';
 import Caste from './pages/Caste';
+import Purpose from './pages/Purpose';
+import Stream from './pages/Stream';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -71,6 +73,8 @@ function App() {
             <Route path="/master/religion" element={<Religion />} />
             <Route path="/master/occupation" element={<Occupation />} />
             <Route path="/master/caste" element={<Caste />} />
+            <Route path="/master/purpose" element={<Purpose />} />
+            <Route path="/master/stream" element={<Stream />} />
             </Routes>
           </div>
         </div>
