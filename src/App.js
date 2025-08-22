@@ -17,6 +17,8 @@ import Nationality from './pages/Nationality';
 import ClassType from './pages/ClassType';
 import PaymentMethod from './pages/PaymentMethod';
 import Religion from './pages/Religion';
+import Occupation from './pages/Occupation';
+import Caste from './pages/Caste';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -67,6 +69,8 @@ function App() {
             <Route path="/master/class-type" element={<ClassType />} />
             <Route path="/master/payment-method" element={<PaymentMethod />} />
             <Route path="/master/religion" element={<Religion />} />
+            <Route path="/master/occupation" element={<Occupation />} />
+            <Route path="/master/caste" element={<Caste />} />
             </Routes>
           </div>
         </div>
