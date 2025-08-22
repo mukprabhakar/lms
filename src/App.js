@@ -12,6 +12,7 @@ import Department from './pages/Department';
 import Designation from './pages/Designation';
 import Organization from './pages/Organization';
 import Branch from './pages/Branch';
+import Section from './pages/Section';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -57,6 +58,7 @@ function App() {
             <Route path="/master/designation" element={<Designation />} />
             <Route path="/master/organization" element={<Organization />} />
             <Route path="/master/branch" element={<Branch />} />
+            <Route path="/master/section" element={<Section />} />
             </Routes>
           </div>
         </div>
