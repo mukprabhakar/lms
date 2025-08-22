@@ -89,7 +89,8 @@ const Sidebar = () => {
       submenu: [
         { title: 'Country', path: '/master/country' },
         { title: 'State', path: '/master/state' },
-        'City', 'Department', 'Designation',
+        { title: 'City', path: '/master/city' },
+        'Department', 'Designation',
         'Organisation', 'Branch', 'Section Master', 'Nationality',
         'Class Type', 'Payment Mode', 'Religion', 'Occupation',
         'Caste', 'Purpose', 'Stream'
