@@ -91,7 +91,7 @@ const Sidebar = () => {
         { title: 'State', path: '/master/state' },
         { title: 'City', path: '/master/city' },
         { title: 'Department', path: '/master/department' },
-        'Designation',
+        { title: 'Designation', path: '/master/designation' },
         'Organisation', 'Branch', 'Section Master', 'Nationality',
         'Class Type', 'Payment Mode', 'Religion', 'Occupation',
         'Caste', 'Purpose', 'Stream'
