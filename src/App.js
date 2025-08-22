@@ -10,6 +10,7 @@ import State from './pages/State';
 import City from './pages/City';
 import Department from './pages/Department';
 import Designation from './pages/Designation';
+import Organization from './pages/Organization';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -53,6 +54,7 @@ function App() {
             <Route path="/master/city" element={<City />} />
             <Route path="/master/department" element={<Department />} />
             <Route path="/master/designation" element={<Designation />} />
+            <Route path="/master/organization" element={<Organization />} />
             </Routes>
           </div>
         </div>
