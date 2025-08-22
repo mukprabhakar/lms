@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import Country from './pages/Country';
 import State from './pages/State';
 import City from './pages/City';
+import Department from './pages/Department';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -49,6 +50,7 @@ function App() {
               <Route path="/master/country" element={<Country />} />
             <Route path="/master/state" element={<State />} />
             <Route path="/master/city" element={<City />} />
+            <Route path="/master/department" element={<Department />} />
             </Routes>
           </div>
         </div>
