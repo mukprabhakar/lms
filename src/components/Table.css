@@ -1,3 +1,182 @@
+/* Header Styles */
+.header {
+  margin-bottom: 24px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.entity-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+.date-picker input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+}
+
+.attendance-select {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.attendance-select.Present {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.attendance-select.Absent {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.attendance-select.Half\ Day {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.attendance-select.Leave {
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+  color: #383d41;
+}
+
+.time-input {
+  min-width: 90px;
+  display: inline-block;
+}
+
+.btn-outline-primary {
+  color: #4e73df;
+  border-color: #4e73df;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn-outline-danger {
+  color: #e74a3b;
+  border-color: #e74a3b;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #e74a3b;
+  border-color: #e74a3b;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #e3e6f0;
+  background: #f8f9fc;
+  color: #4e73df;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-icon:hover {
+  background: #eaecf4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.search-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-box .search-icon {
+  margin: 0 12px;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
 /* Table Controls */
 .table-controls {
   display: flex;
@@ -6,6 +185,62 @@
   margin-bottom: 20px;
   flex-wrap: wrap;
   gap: 15px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px 0;
+  border-top: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #6c757d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  color: #2c3e50;
+}
+
+.pagination-btn.active {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  color: white;
+  font-weight: 600;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #6c757d;
+  font-size: 14px;
 }
 
 .search-input {

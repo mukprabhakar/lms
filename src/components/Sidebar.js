@@ -108,7 +108,11 @@ const Sidebar = () => {
     { 
       title: 'Staff Details', 
       icon: <FiUsers />,
-      submenu: ['Employee', 'User', 'Employee Attendance']
+      submenu: [
+        { title: 'Employee', path: '/staff/employee' },
+        { title: 'User', path: '/staff/user' },
+        { title: 'Employee Attendance', path: '/attendance/employee' }
+      ]
     },
     { 
       title: 'Enquiry', 

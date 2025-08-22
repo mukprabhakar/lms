@@ -21,6 +21,9 @@ import Occupation from './pages/Occupation';
 import Caste from './pages/Caste';
 import Purpose from './pages/Purpose';
 import Stream from './pages/Stream';
+import Employee from './pages/Employee';
+import User from './pages/User';
+import EmployeeAttendance from './pages/EmployeeAttendance';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -75,6 +78,9 @@ function App() {
             <Route path="/master/caste" element={<Caste />} />
             <Route path="/master/purpose" element={<Purpose />} />
             <Route path="/master/stream" element={<Stream />} />
+            <Route path="/staff/employee" element={<Employee />} />
+            <Route path="/staff/user" element={<User />} />
+            <Route path="/attendance/employee" element={<EmployeeAttendance />} />
             </Routes>
           </div>
         </div>
