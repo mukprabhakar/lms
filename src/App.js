@@ -15,6 +15,7 @@ import Branch from './pages/Branch';
 import Section from './pages/Section';
 import Nationality from './pages/Nationality';
 import ClassType from './pages/ClassType';
+import PaymentMethod from './pages/PaymentMethod';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -63,6 +64,7 @@ function App() {
             <Route path="/master/section" element={<Section />} />
             <Route path="/master/nationality" element={<Nationality />} />
             <Route path="/master/class-type" element={<ClassType />} />
+            <Route path="/master/payment-method" element={<PaymentMethod />} />
             </Routes>
           </div>
         </div>
