@@ -1,0 +1,248 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  height: calc(100vh - 70px);
+  background-color: #1e293b;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar.closed {
+  left: -280px;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.school-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.school-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.school-logo h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.toggle-btn:hover {
+  background-color: #334155;
+}
+
+.sidebar-menu {
+  padding: 1rem 0;
+}
+
+.menu-item {
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: #e2e8f0;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu-title-content {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-title:hover {
+  background-color: #334155;
+  color: white;
+}
+
+.menu-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-text {
+  flex: 1;
+}
+
+.menu-arrow {
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.submenu {
+  background-color: #0f172a;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  padding-left: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-item.open .submenu {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.3s ease-in, opacity 0.2s ease-in;
+  padding: 0.25rem 0 0.5rem 0;
+}
+
+.menu-item {
+  position: relative;
+  width: 100%;
+}
+
+.menu-title {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-arrow {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  transition: transform 0.2s ease;
+}
+
+.menu-item.open .menu-arrow {
+  transform: rotate(90deg);
+}
+
+.submenu .submenu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  min-height: 36px;
+  box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submenu .submenu-item:hover {
+  background-color: #1e293b;
+  color: white;
+  padding-left: 3.5rem;
+}
+
+.submenu .submenu-item:hover .submenu-icon {
+  color: #60a5fa;
+  transform: translateX(3px);
+}
+
+.submenu-icon {
+  margin-right: 0.75rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+}
+
+.submenu-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    left: -280px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 280px;
+  padding: 1rem 2rem;
+  transition: margin 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 0;
+}

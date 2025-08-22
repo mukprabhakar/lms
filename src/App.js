@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { FiSearch, FiBell, FiMenu } from 'react-icons/fi';
+import userImage from './user-avatar.png';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+import Country from './pages/Country';
+import './components/Sidebar.css';
+import './components/Dashboard.css';
+import './components/Table.css';
 
 function App() {
+  // Sidebar is always open
+  const sidebarOpen = true;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Sidebar isOpen={sidebarOpen} />
+        
+        <div className={`main-content ${!sidebarOpen ? 'expanded' : ''}`}>
+          <nav className="navbar">
+            <div className="navbar-left">
+              <h1>Welcome Back</h1>
+            </div>
+            <div className="navbar-right">
+              <div className="search-bar">
+                <FiSearch className="search-icon" />
+                <input type="text" placeholder="Search for form" />
+              </div>
+              <button className="notification-btn">
+                <FiBell size={20} />
+                <span className="notification-badge">3</span>
+              </button>
+              <div className="user-profile">
+                <img src={userImage} alt="User" className="user-avatar" />
+                <span className="user-name">Admin</span>
+              </div>
+            </div>
+          </nav>
+          
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/master/country" element={<Country />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
