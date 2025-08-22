@@ -6,6 +6,7 @@ import userImage from './user-avatar.png';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Country from './pages/Country';
+import State from './pages/State';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -45,6 +46,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/master/country" element={<Country />} />
+            <Route path="/master/state" element={<State />} />
             </Routes>
           </div>
         </div>

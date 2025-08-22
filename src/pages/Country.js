@@ -289,7 +289,7 @@ const Country = () => {
   return (
     <div className="page-container">
       <div className="page-header">
-        <h2>Country Management</h2>
+        <h2>Country </h2>
         <button 
           className="btn btn-primary"
           onClick={() => {
