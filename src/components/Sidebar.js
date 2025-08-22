@@ -98,7 +98,8 @@ const Sidebar = () => {
         { title: 'Nationality', path: '/master/nationality' },
         { title: 'Class Type', path: '/master/class-type' },
         { title: 'Payment Method', path: '/master/payment-method' },
-        'Religion', 'Occupation', 'Caste', 'Purpose', 'Stream'
+        { title: 'Religion', path: '/master/religion' },
+        'Occupation', 'Caste', 'Purpose', 'Stream'
       ]
     },
     { 
