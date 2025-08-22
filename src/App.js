@@ -14,6 +14,7 @@ import Organization from './pages/Organization';
 import Branch from './pages/Branch';
 import Section from './pages/Section';
 import Nationality from './pages/Nationality';
+import ClassType from './pages/ClassType';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -61,6 +62,7 @@ function App() {
             <Route path="/master/branch" element={<Branch />} />
             <Route path="/master/section" element={<Section />} />
             <Route path="/master/nationality" element={<Nationality />} />
+            <Route path="/master/class-type" element={<ClassType />} />
             </Routes>
           </div>
         </div>
