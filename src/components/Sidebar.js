@@ -214,15 +214,15 @@ const Sidebar = () => {
       title: 'Settings', 
       icon: <FiSettings />,
       submenu: [
-        'WhatsApp API',
-        'Message Template'
+        { title: 'WhatsApp API', path: '/settings/whatsapp-api' },
+        { title: 'Message Template', path: '/settings/message-template' }
       ]
     },
     { 
       title: 'C-Panel', 
       icon: <FiMonitor />,
       submenu: [
-        'User Management'
+        { title: 'User Groups', path: '/user-management/user-groups' }
       ]
     },
   ];

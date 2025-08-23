@@ -30,6 +30,9 @@ import Registration from './pages/Registration';
 import Admission from './pages/Admission';
 import ClassPromotion from './pages/ClassPromotion';
 import ClassDetails from './pages/ClassDetails';
+import UserGroup from './pages/UserGroup';
+import WhatsAppAPI from './pages/WhatsAppAPI';
+import MessageTemplate from './pages/MessageTemplate';
 // import FineClassCharge from './pages/FineClassCharge';
 // import FeeGeneration from './pages/FeeGeneration';
 import './components/Sidebar.css';
@@ -78,6 +81,8 @@ function App() {
             <Route path="/master/organization" element={<Organization />} />
             <Route path="/master/branch" element={<Branch />} />
             <Route path="/master/section" element={<Section />} />
+            <Route path="/settings/whatsapp-api" element={<WhatsAppAPI />} />
+            <Route path="/settings/message-template" element={<MessageTemplate />} />
             <Route path="/master/nationality" element={<Nationality />} />
             <Route path="/master/class-type" element={<ClassType />} />
             <Route path="/master/payment-method" element={<PaymentMethod />} />
@@ -95,6 +100,7 @@ function App() {
             <Route path="/admission" element={<Admission />} />
             <Route path="/class-promotion" element={<ClassPromotion />} />
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
+            <Route path="/user-management/user-groups" element={<UserGroup />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
             <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
             </Routes>
