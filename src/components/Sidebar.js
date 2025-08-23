@@ -117,7 +117,11 @@ const Sidebar = () => {
     { 
       title: 'Enquiry', 
       icon: <FiUser />,
-      submenu: ['Enquiry', 'Follow Up', 'Registration']
+      submenu: [
+        { title: 'Enquiry', path: '/enquiry' },
+        { title: 'Follow Up', path: '/enquiry/follow-up' },
+        { title: 'Registration', path: '/registration' }
+      ]
     },
     { 
       title: 'Admission', 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiSearch, FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
+import { FiSearch, FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight, FiPlus } from 'react-icons/fi';
 import { format } from 'date-fns';
 import '../components/Table.css';
 
@@ -48,11 +48,11 @@ const EmployeeAttendance = () => {
       employeeName: 'shayan', 
       department: 'Teacher', 
       designation: 'Class teacher',
-      attendance: 'Absent',
+      attendance: 'Present',
       date: format(new Date(), 'yyyy-MM-dd'),
-      checkIn: '--',
-      checkOut: '--',
-      workingHours: '0h 0m'
+      checkIn: '08:30 AM',
+      checkOut: '03:30 PM',
+      workingHours: '7h 0m'
     },
     { 
       id: 5, 
@@ -179,29 +179,9 @@ const EmployeeAttendance = () => {
             <div className="entity-count">
               <span>{attendance.length}</span>
             </div>
-            <div className="date-picker">
-              <input 
-                type="date" 
-                value={selectedDate}
-                onChange={handleDateChange}
-                className="form-control"
-                max={format(new Date(), 'yyyy-MM-dd')}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="search-container">
-          <div className="search-box">
-            <FiSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search employees..."
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-                setCurrentPage(1);
-              }}
-            />
+            <button className="btn btn-primary">
+              <FiPlus /> Add New
+            </button>
           </div>
         </div>
       </div>
@@ -232,10 +212,6 @@ const EmployeeAttendance = () => {
               <th>Employee Name</th>
               <th>Department</th>
               <th>Designation</th>
-              <th>Attendance</th>
-              <th>Check In</th>
-              <th>Check Out</th>
-              <th>Working Hours</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -249,66 +225,12 @@ const EmployeeAttendance = () => {
                   <td>{record.department}</td>
                   <td>{record.designation}</td>
                   <td>
-                    <select
-                      value={record.attendance}
-                      onChange={(e) => handleAttendanceChange(record.id, e.target.value)}
-                      className={`attendance-select ${record.attendance.toLowerCase()}`}
-                    >
-                      <option value="Present">Present</option>
-                      <option value="Absent">Absent</option>
-                      <option value="Half Day">Half Day</option>
-                      <option value="Leave">Leave</option>
-                    </select>
-                  </td>
-                  <td>
-                    {record.attendance === 'Present' || record.attendance === 'Half Day' ? (
-                      <div className="time-input">
-                        {record.checkIn === '--' ? (
-                          <button 
-                            className="btn btn-sm btn-outline-primary"
-                            onClick={() => handleCheckInOut(record.id, 'checkIn')}
-                          >
-                            Check In
-                          </button>
-                        ) : (
-                          record.checkIn
-                        )}
-                      </div>
-                    ) : '--'}
-                  </td>
-                  <td>
-                    {(record.attendance === 'Present' || record.attendance === 'Half Day') && record.checkIn !== '--' ? (
-                      <div className="time-input">
-                        {record.checkOut === '--' ? (
-                          <button 
-                            className="btn btn-sm btn-outline-danger"
-                            onClick={() => handleCheckInOut(record.id, 'checkOut')}
-                            disabled={record.checkIn === '--'}
-                          >
-                            Check Out
-                          </button>
-                        ) : (
-                          record.checkOut
-                        )}
-                      </div>
-                    ) : '--'}
-                  </td>
-                  <td>{record.workingHours}</td>
-                  <td>
                     <div className="action-buttons">
                       <button 
-                        className="btn btn-sm btn-icon"
-                        title="View Details"
+                        className="btn btn-sm btn-primary"
                         onClick={() => {}}
                       >
-                        <i className="fas fa-eye"></i>
-                      </button>
-                      <button 
-                        className="btn btn-sm btn-icon"
-                        title="Edit"
-                        onClick={() => {}}
-                      >
-                        <i className="fas fa-edit"></i>
+                        Mark Attendance
                       </button>
                     </div>
                   </td>
@@ -316,7 +238,7 @@ const EmployeeAttendance = () => {
               ))
             ) : (
               <tr>
-                <td colSpan="10" className="text-center">No records found</td>
+                <td colSpan="6" className="text-center">No records found</td>
               </tr>
             )}
           </tbody>
