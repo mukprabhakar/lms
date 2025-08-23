@@ -185,8 +185,13 @@ const Sidebar = () => {
       title: 'Inventory', 
       icon: <FiLayers />,
       submenu: [
-        'Stock Location', 'Item Category Master', 'Item Master',
-        'Vendor Master', 'Stock Inward', 'Stock Return', 'Stock Insurance'
+        { title: 'Stock Locations', path: '/inventory/stock-locations' },
+        { title: 'Item Categories', path: '/inventory/item-categories' },
+        { title: 'Item Master', path: '/inventory/items' },
+        { title: 'Vendor Master', path: '/inventory/vendors' },
+        { title: 'Stock Inward', path: '/inventory/stock-inward' },
+        { title: 'Stock Return', path: '/inventory/stock-return' },
+        { title: 'Stock Insurance', path: '/inventory/stock-insurance' }
       ]
     },
     { 

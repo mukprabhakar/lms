@@ -30,6 +30,9 @@ import Registration from './pages/Registration';
 import Admission from './pages/Admission';
 import ClassPromotion from './pages/ClassPromotion';
 import ClassDetails from './pages/ClassDetails';
+import StockLocation from './pages/StockLocation';
+import ItemCategory from './pages/ItemCategory';
+import ItemMaster from './pages/ItemMaster';
 import UserGroup from './pages/UserGroup';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
@@ -100,6 +103,9 @@ function App() {
             <Route path="/admission" element={<Admission />} />
             <Route path="/class-promotion" element={<ClassPromotion />} />
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
+            <Route path="/inventory/stock-locations" element={<StockLocation />} />
+            <Route path="/inventory/item-categories" element={<ItemCategory />} />
+            <Route path="/inventory/items" element={<ItemMaster />} />
             <Route path="/user-management/user-groups" element={<UserGroup />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
             <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
