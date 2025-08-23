@@ -29,6 +29,9 @@ import FollowUp from './pages/FollowUp';
 import Registration from './pages/Registration';
 import Admission from './pages/Admission';
 import ClassPromotion from './pages/ClassPromotion';
+import ClassDetails from './pages/ClassDetails';
+// import FineClassCharge from './pages/FineClassCharge';
+// import FeeGeneration from './pages/FeeGeneration';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -91,6 +94,9 @@ function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/admission" element={<Admission />} />
             <Route path="/class-promotion" element={<ClassPromotion />} />
+            <Route path="/fee-management/class-details" element={<ClassDetails />} />
+            {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
+            <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
             </Routes>
           </div>
         </div>
