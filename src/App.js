@@ -27,6 +27,8 @@ import EmployeeAttendance from './pages/EmployeeAttendance';
 import Enquiry from './pages/Enquiry';
 import FollowUp from './pages/FollowUp';
 import Registration from './pages/Registration';
+import Admission from './pages/Admission';
+import ClassPromotion from './pages/ClassPromotion';
 import './components/Sidebar.css';
 import './components/Dashboard.css';
 import './components/Table.css';
@@ -87,6 +89,8 @@ function App() {
             <Route path="/enquiry" element={<Enquiry />} />
             <Route path="/enquiry/follow-up" element={<FollowUp />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/admission" element={<Admission />} />
+            <Route path="/class-promotion" element={<ClassPromotion />} />
             </Routes>
           </div>
         </div>

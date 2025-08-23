@@ -126,7 +126,10 @@ const Sidebar = () => {
     { 
       title: 'Admission', 
       icon: <FiBookOpen />,
-      submenu: ['Admission', 'Class Promotion']
+      submenu: [
+        { title: 'Admission', path: '/admission' },
+        { title: 'Class Promotion', path: '/class-promotion' }
+      ]
     },
     { 
       title: 'Fee Management', 
