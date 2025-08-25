@@ -144,7 +144,10 @@ const Sidebar = () => {
     { 
       title: 'Fee', 
       icon: <FiDollarSign />,
-      submenu: ['Fee Deposit', 'Due List']
+      submenu: [
+        { title: 'Fee Deposit', path: '/fee-management/fee-deposit' },
+        { title: 'Due List', path: '/fee-management/due-list' }
+      ]
     },
     { 
       title: 'Classroom Management', 

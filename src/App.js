@@ -48,6 +48,8 @@ import RouteVehicleMapping from './pages/RouteVehicleMapping';
 import VehicleTypeManagement from './pages/VehicleTypeManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
+import FeeDeposit from './pages/FeeDeposit';
+import DueList from './pages/DueList';
 // import FineClassCharge from './pages/FineClassCharge';
 // import FeeGeneration from './pages/FeeGeneration';
 import './components/Sidebar.css';
@@ -125,6 +127,8 @@ function App() {
             <Route path="/admission" element={<Admission />} />
             <Route path="/class-promotion" element={<ClassPromotion />} />
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
+            <Route path="/fee-management/fee-deposit" element={<FeeDeposit />} />
+            <Route path="/fee-management/due-list" element={<DueList />} />
             <Route path="/inventory/stock-locations" element={<StockLocation />} />
             <Route path="/inventory/item-categories" element={<ItemCategory />} />
             <Route path="/inventory/items" element={<ItemMaster />} />
