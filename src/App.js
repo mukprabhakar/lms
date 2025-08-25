@@ -41,6 +41,11 @@ import LessonManagement from './pages/LessonManagement';
 import TopicManagement from './pages/TopicManagement';
 import TimePeriodManagement from './pages/TimePeriodManagement';
 import TimeTableManagement from './pages/TimeTableManagement';
+import VehicleManagement from './pages/VehicleManagement';
+import RouteManagement from './pages/RouteManagement';
+import DriverVehicleAssignment from './pages/DriverVehicleAssignment';
+import RouteVehicleMapping from './pages/RouteVehicleMapping';
+import VehicleTypeManagement from './pages/VehicleTypeManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
 // import FineClassCharge from './pages/FineClassCharge';
@@ -96,6 +101,11 @@ function App() {
             <Route path="/academics/topic-management" element={<TopicManagement />} />
             <Route path="/academics/time-period-management" element={<TimePeriodManagement />} />
             <Route path="/academics/time-table" element={<TimeTableManagement />} />
+            <Route path="/transport/vehicles" element={<VehicleManagement />} />
+            <Route path="/transport/routes" element={<RouteManagement />} />
+              <Route path="/transport/driver-assignments" element={<DriverVehicleAssignment />} />
+              <Route path="/transport/route-mapping" element={<RouteVehicleMapping />} />
+              <Route path="/transport/vehicle-types" element={<VehicleTypeManagement />} />
             <Route path="/academics/whatsapp-api" element={<WhatsAppAPI />} />
               <Route path="/academics/message-template" element={<MessageTemplate />} />
             <Route path="/master/nationality" element={<Nationality />} />

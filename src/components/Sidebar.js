@@ -204,11 +204,11 @@ const Sidebar = () => {
       title: 'Transportation', 
       icon: <FiTruck />,
       submenu: [
-        'Vehicle Management',
-        'Route Management',
-        'Driver Vehicle Assign',
-        'Route Vehicle Mapping',
-        'Vehicle Type Management'
+        { title: 'Vehicle Management', path: '/transport/vehicles' },
+        { title: 'Route Management', path: '/transport/routes' },
+        { title: 'Driver Vehicle Assign', path: '/transport/driver-assignments' },
+        { title: 'Route Vehicle Mapping', path: '/transport/route-mapping' },
+        { title: 'Vehicle Type Management', path: '/transport/vehicle-types' }
       ]
     },
     { 
