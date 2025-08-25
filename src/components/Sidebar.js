@@ -160,7 +160,10 @@ const Sidebar = () => {
     { 
       title: 'Time Table', 
       icon: <FiClock />,
-      submenu: ['Time Period', 'Create Time Table']
+      submenu: [
+        { title: 'Time Period', path: '/academics/time-period-management' },
+        { title: 'Create Time Table', path: '/academics/time-table' }
+      ]
     },
     { 
       title: 'Student Details', 

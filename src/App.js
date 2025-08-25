@@ -39,6 +39,8 @@ import ClassMapping from './pages/ClassMapping';
 import ClassTeacherMapping from './pages/ClassTeacherMapping';
 import LessonManagement from './pages/LessonManagement';
 import TopicManagement from './pages/TopicManagement';
+import TimePeriodManagement from './pages/TimePeriodManagement';
+import TimeTableManagement from './pages/TimeTableManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
 // import FineClassCharge from './pages/FineClassCharge';
@@ -92,6 +94,8 @@ function App() {
             <Route path="/academics/class-teacher-mapping" element={<ClassTeacherMapping />} />
             <Route path="/academics/lesson-management" element={<LessonManagement />} />
             <Route path="/academics/topic-management" element={<TopicManagement />} />
+            <Route path="/academics/time-period-management" element={<TimePeriodManagement />} />
+            <Route path="/academics/time-table" element={<TimeTableManagement />} />
             <Route path="/academics/whatsapp-api" element={<WhatsAppAPI />} />
               <Route path="/academics/message-template" element={<MessageTemplate />} />
             <Route path="/master/nationality" element={<Nationality />} />
