@@ -150,8 +150,11 @@ const Sidebar = () => {
       title: 'Classroom Management', 
       icon: <FiBook />,
       submenu: [
-        'Subject Master', 'Class Mapping', 'Class Teacher Mapping',
-        'Lesson', 'Topic'
+        { title: 'Subject Master', path: '/academics/subject-master' },
+        { title: 'Class Mapping', path: '/academics/class-mapping' },
+        { title: 'Class Teacher Mapping', path: '/academics/class-teacher-mapping' },
+        { title: 'Lesson Management', path: '/academics/lesson-management' },
+        { title: 'Topic Management', path: '/academics/topic-management' }
       ]
     },
     { 

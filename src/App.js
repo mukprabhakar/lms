@@ -34,6 +34,11 @@ import StockLocation from './pages/StockLocation';
 import ItemCategory from './pages/ItemCategory';
 import ItemMaster from './pages/ItemMaster';
 import UserGroup from './pages/UserGroup';
+import SubjectMaster from './pages/SubjectMaster';
+import ClassMapping from './pages/ClassMapping';
+import ClassTeacherMapping from './pages/ClassTeacherMapping';
+import LessonManagement from './pages/LessonManagement';
+import TopicManagement from './pages/TopicManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
 // import FineClassCharge from './pages/FineClassCharge';
@@ -83,9 +88,12 @@ function App() {
             <Route path="/master/designation" element={<Designation />} />
             <Route path="/master/organization" element={<Organization />} />
             <Route path="/master/branch" element={<Branch />} />
-            <Route path="/master/section" element={<Section />} />
-            <Route path="/settings/whatsapp-api" element={<WhatsAppAPI />} />
-            <Route path="/settings/message-template" element={<MessageTemplate />} />
+              <Route path="/academics/class-mapping" element={<ClassMapping />} />
+            <Route path="/academics/class-teacher-mapping" element={<ClassTeacherMapping />} />
+            <Route path="/academics/lesson-management" element={<LessonManagement />} />
+            <Route path="/academics/topic-management" element={<TopicManagement />} />
+            <Route path="/academics/whatsapp-api" element={<WhatsAppAPI />} />
+              <Route path="/academics/message-template" element={<MessageTemplate />} />
             <Route path="/master/nationality" element={<Nationality />} />
             <Route path="/master/class-type" element={<ClassType />} />
             <Route path="/master/payment-method" element={<PaymentMethod />} />
@@ -106,6 +114,7 @@ function App() {
             <Route path="/inventory/stock-locations" element={<StockLocation />} />
             <Route path="/inventory/item-categories" element={<ItemCategory />} />
             <Route path="/inventory/items" element={<ItemMaster />} />
+            <Route path="/academics/subject-master" element={<SubjectMaster />} />
             <Route path="/user-management/user-groups" element={<UserGroup />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
             <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
