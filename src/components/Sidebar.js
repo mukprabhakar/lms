@@ -171,6 +171,7 @@ const Sidebar = () => {
       icon: <FiDollarSign />,
       submenu: [
         { title: "Class Details", path: "/fee-management/class-details" },
+        { title: "Fine Management", path: "/fee-management/fine-management" },
         {
           title: "Fine Class Charge",
           path: "/fee-management/fine-class-charge",

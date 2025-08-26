@@ -62,6 +62,10 @@ import FeeDeposit from './pages/FeeDeposit';
 import DueList from './pages/DueList';
 import AssignmentCreate from './pages/AssignmentCreate';
 import AssignmentsView from './pages/AssignmentsView';
+import FineManagement from './pages/FineManagement';
+import FineClassCharge from './pages/FineClassCharge';
+import FeeGeneration from './pages/FeeGeneration';
+import Concession from './pages/Concession';
 import AdmitCard from './pages/AdmitCard';
 import StudentTC from './pages/StudentTC';
 import StudentUser from './pages/StudentUser';
@@ -152,6 +156,10 @@ function App() {
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
             <Route path="/fee-management/fee-deposit" element={<FeeDeposit />} />
             <Route path="/fee-management/due-list" element={<DueList />} />
+            <Route path="/fee-management/fine-management" element={<FineManagement />} />
+            <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
+            <Route path="/fee-management/fee-generation" element={<FeeGeneration />} />
+            <Route path="/fee-management/concession" element={<Concession />} />
             <Route path="/inventory/stock-locations" element={<StockLocation />} />
             <Route path="/inventory/item-categories" element={<ItemCategory />} />
             <Route path="/inventory/items" element={<ItemMaster />} />
