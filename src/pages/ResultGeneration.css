@@ -1,3 +1,161 @@
+/* Print Modal */
+.print-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+.print-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.print-modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.print-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+}
+
+.print-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.print-actions {
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Print-specific styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-content,
+  .print-content * {
+    visibility: visible;
+  }
+  .print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20mm;
+  }
+  .print-actions {
+    display: none;
+  }
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.result-header h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.result-header h3 {
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.student-info {
+  margin: 30px 0;
+}
+
+.student-info h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.student-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.student-info td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.student-info td:first-child {
+  font-weight: 500;
+  background-color: #f8f9fa;
+  width: 25%;
+}
+
+.signature-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.signature {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.signature-line {
+  border-top: 1px solid #000;
+  margin: 0 auto 10px;
+  width: 80%;
+  height: 1px;
+}
+
+.print-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: #6c757d;
+  border-top: 1px solid #e9ecef;
+  padding-top: 15px;
+}
+
 /* Main Container */
 .result-generation-container {
   padding: 20px;

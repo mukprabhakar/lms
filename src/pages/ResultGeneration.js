@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { FiDownload, FiFilter, FiSearch, FiPrinter } from 'react-icons/fi';
+import React, { useState, useRef } from 'react';
+import { FiDownload, FiFilter, FiSearch, FiPrinter, FiX } from 'react-icons/fi';
 import './ResultGeneration.css';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 const ResultGeneration = () => {
   // Form state
@@ -20,6 +22,9 @@ const ResultGeneration = () => {
   const exams = ['Unit Test 1', 'Half Yearly', 'Unit Test 2', 'Final Exam'];
   const subjects = ['Mathematics', 'Science', 'English', 'Social Studies', 'Hindi', 'Computer Science'];
   
+  // Modal state
+  const printRef = useRef();
+
   // Sample result data
   const [results, setResults] = useState([
     { id: 1, rollNo: '001', name: 'John Doe', marks: 85, grade: 'A', status: 'Passed' },
@@ -27,6 +32,11 @@ const ResultGeneration = () => {
     { id: 3, rollNo: '003', name: 'Robert Johnson', marks: 78, grade: 'B+', status: 'Passed' },
     { id: 4, rollNo: '004', name: 'Emily Davis', marks: 65, grade: 'B', status: 'Passed' },
     { id: 5, rollNo: '005', name: 'Michael Brown', marks: 42, grade: 'D', status: 'Failed' },
+    { id: 6, rollNo: '006', name: 'Linda Wilson', marks: 55, grade: 'C', status: 'Passed' },
+    { id: 7, rollNo: '007', name: 'William Taylor', marks: 30, grade: 'F', status: 'Failed' },
+    { id: 8, rollNo: '008', name: 'Elizabeth Martinez', marks: 88, grade: 'A', status: 'Passed' },
+    { id: 9, rollNo: '009', name: 'David Anderson', marks: 73, grade: 'B+', status: 'Passed' },
+    { id: 10, rollNo: '010', name: 'Jennifer Thomas', marks: 95, grade: 'A+', status: 'Passed' },
   ]);
 
   // Handle input change
@@ -51,10 +61,103 @@ const ResultGeneration = () => {
     alert('Generating results based on current filters...');
   };
 
-  // Handle print results
+  // Handle print for all results
   const handlePrintResults = () => {
     window.print();
   };
+  
+  // Handle print for individual student result
+  const handlePrintResult = (student) => {
+    // Create a new PDF document
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
+    });
+
+    // Set font
+    pdf.setFont('helvetica');
+    pdf.setFontSize(16);
+    
+    // Add header
+    pdf.setTextColor(44, 62, 80);
+    pdf.text('School Name', 105, 20, { align: 'center' });
+    pdf.setFontSize(14);
+    pdf.text('Academic Transcript', 105, 30, { align: 'center' });
+    
+    // Add academic info
+    pdf.setFontSize(10);
+    pdf.setTextColor(85, 85, 85);
+    pdf.text(`Academic Year: ${filters.session || '2023-2024'}`, 105, 40, { align: 'center' });
+    pdf.text(`Class: ${filters.class || ''} ${filters.section ? `- Section ${filters.section}` : ''}`, 105, 45, { align: 'center' });
+    pdf.text(`Exam: ${filters.exam || 'Final Exam'}`, 105, 50, { align: 'center' });
+    
+    // Add student info section
+    pdf.setFontSize(12);
+    pdf.setTextColor(44, 62, 80);
+    pdf.text('Student Information', 20, 70);
+    
+    // Add student details in a table
+    const startY = 80;
+    const cellPadding = 8;
+    const cellHeight = 8;
+    
+    // Table headers
+    pdf.setFillColor(240, 240, 240);
+    pdf.rect(20, startY, 170, cellHeight, 'F');
+    pdf.setTextColor(0, 0, 0);
+    pdf.setFont(undefined, 'bold');
+    pdf.text('Roll No', 25, startY + 5);
+    pdf.text('Name', 60, startY + 5);
+    pdf.text('Marks', 120, startY + 5);
+    pdf.text('Grade', 150, startY + 5);
+    pdf.text('Status', 180, startY + 5);
+    
+    // Student data row
+    const statusColor = student.status === 'Passed' ? [40, 167, 69] : [220, 53, 69];
+    const gradeColor = student.grade === 'F' ? [220, 53, 69] : [40, 167, 69];
+    
+    pdf.rect(20, startY + cellHeight, 170, cellHeight, 'S');
+    pdf.setFont(undefined, 'normal');
+    pdf.text(student.rollNo, 25, startY + cellHeight + 5);
+    pdf.text(student.name, 60, startY + cellHeight + 5);
+    pdf.text(student.marks.toString(), 120, startY + cellHeight + 5);
+    
+    pdf.setTextColor(gradeColor[0], gradeColor[1], gradeColor[2]);
+    pdf.text(student.grade, 150, startY + cellHeight + 5);
+    
+    pdf.setTextColor(statusColor[0], statusColor[1], statusColor[2]);
+    pdf.text(student.status, 180, startY + cellHeight + 5);
+    
+    // Add signature section
+    const signatureY = startY + cellHeight * 4;
+    
+    // Teacher signature
+    pdf.setTextColor(0, 0, 0);
+    pdf.setFont(undefined, 'normal');
+    pdf.text('Class Teacher', 40, signatureY);
+    pdf.line(30, signatureY + 5, 70, signatureY + 5);
+    
+    // Principal signature
+    pdf.text('Principal', 150, signatureY);
+    pdf.line(130, signatureY + 5, 170, signatureY + 5);
+    
+    // Date
+    pdf.text(`Date: ${new Date().toLocaleDateString()}`, 20, signatureY + 20);
+    
+    // Footer note
+    pdf.setFontSize(8);
+    pdf.setTextColor(100, 100, 100);
+    pdf.text('This is a computer-generated document. No signature is required.', 105, 280, { align: 'center' });
+    
+    // Generate PDF as data URL
+    const pdfUrl = pdf.output('bloburl');
+    
+    // Open PDF in new tab
+    window.open(pdfUrl, '_blank');
+  };
+
+  
 
   // Handle download results
   const handleDownloadResults = () => {
@@ -297,6 +400,15 @@ const ResultGeneration = () => {
                     </td>
                     <td className="text-center">
                       <button 
+                        className="btn btn-sm btn-outline-primary"
+                        onClick={() => handlePrintResult(result)}
+                        title="Print Result"
+                      >
+                        <FiPrinter />
+                      </button>
+                    </td>
+                    {/* <td className="text-center">
+                      <button 
                         className="btn-action btn-view"
                         onClick={() => console.log('View details for', result.id)}
                         title="View Details"
@@ -310,7 +422,7 @@ const ResultGeneration = () => {
                       >
                         <FiPrinter size={14} />
                       </button>
-                    </td>
+                    </td> */}
                   </tr>
                 ))}
               </tbody>
