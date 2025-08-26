@@ -50,6 +50,8 @@ import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
 import FeeDeposit from './pages/FeeDeposit';
 import DueList from './pages/DueList';
+import AssignmentCreate from './pages/AssignmentCreate';
+import AssignmentsView from './pages/AssignmentsView';
 // import FineClassCharge from './pages/FineClassCharge';
 // import FeeGeneration from './pages/FeeGeneration';
 import './components/Sidebar.css';
@@ -132,6 +134,8 @@ function App() {
             <Route path="/inventory/stock-locations" element={<StockLocation />} />
             <Route path="/inventory/item-categories" element={<ItemCategory />} />
             <Route path="/inventory/items" element={<ItemMaster />} />
+            <Route path="/academics/assignments" element={<AssignmentsView />} />
+            <Route path="/academics/assignments/create" element={<AssignmentCreate />} />
             <Route path="/academics/subject-master" element={<SubjectMaster />} />
             <Route path="/user-management/user-groups" element={<UserGroup />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />

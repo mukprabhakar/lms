@@ -176,7 +176,10 @@ const Sidebar = () => {
     { 
       title: 'Assignment', 
       icon: <FiFileText />,
-      submenu: ['Assignment Create', 'Assignment View']
+      submenu: [
+        { title: 'Create Assignment', path: '/academics/assignments/create' },
+        { title: 'View Assignments', path: '/academics/assignments' }
+      ]
     },
     { 
       title: 'Examination', 
