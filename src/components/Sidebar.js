@@ -171,7 +171,12 @@ const Sidebar = () => {
     { 
       title: 'Student Details', 
       icon: <FiUser />,
-      submenu: ['Admit Card', 'Student TC', 'Student User', 'Attendance']
+      submenu: [
+        { title: 'Admit Card', path: '/student/admit-card' },
+        { title: 'Student TC', path: '/student/tc' },
+        { title: 'Student User', path: '/student/user' },
+        { title: 'Attendance', path: '/student/attendance' }
+      ]
     },
     { 
       title: 'Assignment', 

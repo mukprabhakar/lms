@@ -48,10 +48,14 @@ import RouteVehicleMapping from './pages/RouteVehicleMapping';
 import VehicleTypeManagement from './pages/VehicleTypeManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
+import Attendance from './pages/Attendance';
 import FeeDeposit from './pages/FeeDeposit';
 import DueList from './pages/DueList';
 import AssignmentCreate from './pages/AssignmentCreate';
 import AssignmentsView from './pages/AssignmentsView';
+import AdmitCard from './pages/AdmitCard';
+import StudentTC from './pages/StudentTC';
+import StudentUser from './pages/StudentUser';
 // import FineClassCharge from './pages/FineClassCharge';
 // import FeeGeneration from './pages/FeeGeneration';
 import './components/Sidebar.css';
@@ -138,6 +142,10 @@ function App() {
             <Route path="/academics/assignments/create" element={<AssignmentCreate />} />
             <Route path="/academics/subject-master" element={<SubjectMaster />} />
             <Route path="/user-management/user-groups" element={<UserGroup />} />
+            <Route path="/student/admit-card" element={<AdmitCard />} />
+            <Route path="/student/tc" element={<StudentTC />} />
+            <Route path="/student/user" element={<StudentUser />} />
+            <Route path="/student/attendance" element={<Attendance />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
             <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
             </Routes>
