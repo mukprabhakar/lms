@@ -28,6 +28,8 @@ import Enquiry from './pages/Enquiry';
 import FollowUp from './pages/FollowUp';
 import Registration from './pages/Registration';
 import Admission from './pages/Admission';
+import ExamSubCategory from './pages/ExamSubCategory';
+import Exam from './pages/Exam';
 import ClassPromotion from './pages/ClassPromotion';
 import ClassDetails from './pages/ClassDetails';
 import StockLocation from './pages/StockLocation';
@@ -48,6 +50,7 @@ import RouteVehicleMapping from './pages/RouteVehicleMapping';
 import VehicleTypeManagement from './pages/VehicleTypeManagement';
 import WhatsAppAPI from './pages/WhatsAppAPI';
 import MessageTemplate from './pages/MessageTemplate';
+import ExamCriteria from './pages/ExamCriteria';
 import Attendance from './pages/Attendance';
 import FeeDeposit from './pages/FeeDeposit';
 import DueList from './pages/DueList';
@@ -146,6 +149,9 @@ function App() {
             <Route path="/student/tc" element={<StudentTC />} />
             <Route path="/student/user" element={<StudentUser />} />
             <Route path="/student/attendance" element={<Attendance />} />
+            <Route path="/examination/exam-criteria" element={<ExamCriteria />} />
+            <Route path="/examination/sub-category" element={<ExamSubCategory />} />
+            <Route path="/examination/exam" element={<Exam />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
             <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
             </Routes>

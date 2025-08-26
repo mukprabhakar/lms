@@ -190,7 +190,9 @@ const Sidebar = () => {
       title: 'Examination', 
       icon: <FiAward />,
       submenu: [
-        'Examination Criteria', 'Exam Sub Category', 'Exam'
+        { title: 'Exam Criteria', path: '/examination/exam-criteria' },
+        { title: 'Exam Sub Category', path: '/examination/sub-category' },
+        { title: 'Exam', path: '/examination/exam' }
       ]
     },
     { 
