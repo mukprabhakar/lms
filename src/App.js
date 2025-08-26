@@ -112,6 +112,7 @@ function App() {
             <Route path="/master/designation" element={<Designation />} />
             <Route path="/master/organization" element={<Organization />} />
             <Route path="/master/branch" element={<Branch />} />
+              <Route path="/master/section" element={<Section />} />
               <Route path="/academics/class-mapping" element={<ClassMapping />} />
             <Route path="/academics/class-teacher-mapping" element={<ClassTeacherMapping />} />
             <Route path="/academics/lesson-management" element={<LessonManagement />} />
@@ -165,8 +166,10 @@ function App() {
             <Route path="/examination/exam-criteria" element={<ExamCriteria />} />
             <Route path="/examination/sub-category" element={<ExamSubCategory />} />
             <Route path="/examination/exam" element={<Exam />} />
+            <Route path="/settings/whatsapp-api" element={<WhatsAppAPI />} />
+            <Route path="/settings/message-template" element={<MessageTemplate />} />
             {/* <Route path="/fee-management/fine-class-charge" element={<FineClassCharge />} />
-            <Route path="/fee-management/fee-generation" element={<FeeGeneration />} /> */}
+            <Route path="/fee-management/fee-generation" element={<FeeGeneration />} */}
             </Routes>
           </div>
         </div>
