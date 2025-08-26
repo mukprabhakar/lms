@@ -32,6 +32,10 @@ import ExamSubCategory from './pages/ExamSubCategory';
 import Exam from './pages/Exam';
 import ResultGeneration from './pages/ResultGeneration';
 import GetResult from './pages/GetResult';
+import PaymentReport from './pages/PaymentReport';
+import AdmissionReport from './pages/AdmissionReport';
+import InventoryReport from './pages/InventoryReport';
+import AttendanceReport from './pages/AttendanceReport';
 import ClassPromotion from './pages/ClassPromotion';
 import ClassDetails from './pages/ClassDetails';
 import StockLocation from './pages/StockLocation';
@@ -139,6 +143,10 @@ function App() {
             <Route path="/examination/exam" element={<Exam />} />
               <Route path="/examination/result-generation" element={<ResultGeneration />} />
               <Route path="/examination/get-result" element={<GetResult />} />
+              <Route path="/reports/payment-report" element={<PaymentReport />} />
+                <Route path="/reports/admission-report" element={<AdmissionReport />} />
+                <Route path="/reports/inventory-report" element={<InventoryReport />} />
+                <Route path="/reports/attendance-report" element={<AttendanceReport />} />
               <Route path="/academics/class-promotion" element={<ClassPromotion />} />
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
             <Route path="/fee-management/fee-deposit" element={<FeeDeposit />} />

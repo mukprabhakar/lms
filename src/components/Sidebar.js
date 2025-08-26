@@ -275,10 +275,10 @@ const Sidebar = () => {
       title: "Reports",
       icon: <FiFileText />,
       submenu: [
-        "Payment Report",
-        "Admission Report",
-        "Inventory Report",
-        "Attendance Report",
+        { title: "Payment Report", path: "/reports/payment-report" },
+        { title: "Admission Report", path: "/reports/admission-report" },
+        { title: "Inventory Report", path: "/reports/inventory-report" },
+        { title: "Attendance Report", path: "/reports/attendance-report" },
       ],
     },
     {
