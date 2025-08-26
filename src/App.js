@@ -30,6 +30,8 @@ import Registration from './pages/Registration';
 import Admission from './pages/Admission';
 import ExamSubCategory from './pages/ExamSubCategory';
 import Exam from './pages/Exam';
+import ResultGeneration from './pages/ResultGeneration';
+import GetResult from './pages/GetResult';
 import ClassPromotion from './pages/ClassPromotion';
 import ClassDetails from './pages/ClassDetails';
 import StockLocation from './pages/StockLocation';
@@ -134,7 +136,10 @@ function App() {
             <Route path="/enquiry/follow-up" element={<FollowUp />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/admission" element={<Admission />} />
-            <Route path="/class-promotion" element={<ClassPromotion />} />
+            <Route path="/examination/exam" element={<Exam />} />
+              <Route path="/examination/result-generation" element={<ResultGeneration />} />
+              <Route path="/examination/get-result" element={<GetResult />} />
+              <Route path="/academics/class-promotion" element={<ClassPromotion />} />
             <Route path="/fee-management/class-details" element={<ClassDetails />} />
             <Route path="/fee-management/fee-deposit" element={<FeeDeposit />} />
             <Route path="/fee-management/due-list" element={<DueList />} />
